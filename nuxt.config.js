@@ -46,5 +46,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+  },
+
+  env: {
+    MICRO_CMS_URL: process.env.MICRO_CMS_URL,
+    MICRO_CMS_API_KEY: process.env.MICRO_CMS_API_KEY
   }
 }
