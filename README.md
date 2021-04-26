@@ -1,20 +1,17 @@
 # de_stress_list
 
-## Build Setup
+## Overview
 
-```bash
-# install dependencies
-$ yarn install
+It is an application that displays stress relief methods.
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## Requirement
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+- Nuxt.js
+- microCMS
+- Netlify
 
-# generate static project
-$ yarn generate
-```
+## License
+[MIT](https://github.com/i-tanaka730/de_stress_list/blob/master/LICENSE)
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Author
+[Ikuya Tanaka](https://github.com/i-tanaka730)
