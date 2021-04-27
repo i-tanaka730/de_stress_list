@@ -1,23 +1,23 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        de_stress_list
-      </h1>
       <el-table
         :data="items">
         <el-table-column
           prop="title"
-          label="タイトル">
+          label="タイトル"
+          width="250">
         </el-table-column>
         <el-table-column
           prop="description"
-          label="説明">
+          label="説明"
+          width="500">
         </el-table-column>
-        <el-table-column
-          label="画像">
+         <el-table-column
+          label="イメージ"
+          width="120">
           <template slot-scope="scope">
-            <img :src="scope.row.image.url" />
+            <img :src="scope.row.image.url" width="80px" height="80px"/>
           </template>
         </el-table-column>
       </el-table>
@@ -49,42 +49,5 @@ export default Vue.extend(
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
