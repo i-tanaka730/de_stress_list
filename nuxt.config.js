@@ -46,6 +46,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+		extend (config, ctx) {
+			//ここから追加
+					if (ctx.isDev && ctx.isClient) {
+						config.devtool = 'inline-cheap-module-source-map'
+					}
+			//ここまで追加
+				}
   },
 
   env: {

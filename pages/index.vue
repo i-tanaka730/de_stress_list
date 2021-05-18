@@ -25,27 +25,23 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
-import axios from 'axios'
+import { MicroCms } from './microcms'
 
 const MICRO_CMS_URL = process.env.MICRO_CMS_URL ?? "";
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY ?? "";
 
 export default Vue.extend(
-  {
-    data () {
-      return {
-        items: []
-      }
-    },
-    async asyncData () {
-      const { data } = await axios.get(MICRO_CMS_URL, {headers: { 'X-API-KEY': MICRO_CMS_API_KEY }})
-      return {
-        items: data.contents
-      }
+{
+  async asyncData () {
+    const microCms = new MicroCms();
+    const contents = await microCms.getData(MICRO_CMS_URL, MICRO_CMS_API_KEY);
+    return {
+      items: contents
     }
-  })
+  }
+})
 </script>
 
 <style>
