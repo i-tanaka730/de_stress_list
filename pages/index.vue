@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import { MicroCms } from './microcms'
+import Vue from 'vue';
+import { MicroCms } from '@i-tanaka730/microcms-npm';
 
 const MICRO_CMS_URL = process.env.MICRO_CMS_URL ?? "";
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY ?? "";
@@ -35,8 +35,7 @@ const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY ?? "";
 export default Vue.extend(
 {
   async asyncData () {
-    const microCms = new MicroCms();
-    const contents = await microCms.getData(MICRO_CMS_URL, MICRO_CMS_API_KEY);
+    const contents = await MicroCms.getData(MICRO_CMS_URL, MICRO_CMS_API_KEY);
     return {
       items: contents
     }
